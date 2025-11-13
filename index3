@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code of even odd</title>
+</head>
+<body>
+     <h1>Checking Number is Even or Odd </h1>
+    <script>
+   var num;
+   num =prompt("enter a number");
+   if(num%2==0){
+    document.write("The number is Even:-" +num);
+   }
+   else{
+    document.write("The number is Odd :- " +num);
+   }
+    </script>
+    <section class="continue-section">
+        <h2>Ready to Continue?</h2>
+        <p>Click below to start your lowercase and upper case task.</p>
+        <button class="btn" onclick="window.location.href='index4.html'">Continue to Next Task ➡</button>
+    </section>
+</body>
+</html>
