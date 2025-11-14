@@ -4,156 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction to Web Technologies</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-            margin: 10px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #4CAF50;
-        }
-        p {
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: #45a049;
-        }
-        code {
-            display: block;
-            background-color: #f5f5f5;
-            padding: 10px;
-            border-radius: 4px;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            font-family: monospace;
-        }
-        /* Centering the final section */
-        .continue-section {
-            text-align: center;
-        }
-    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <h1>Introduction to Web Technologies</h1>
     <p>Explore different web technologies and perform interactive tasks.</p>
+
+    <!-- DARK MODE BUTTON -->
+    <button id="darkModeBtn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
 </header>
 
 <div class="container">
 
-    
-    <section>
+    <!-- INTRO SECTION -->
+    <section class="fade">
         <h2>What is Web Technology?</h2>
         <p>Web technologies are tools and techniques used to create and maintain websites and web applications. The major technologies include:</p>
         <ul>
-            <li><strong>HTML</strong> (HyperText Markup Language) - Used for creating and structuring web content.</li>
-            <li><strong>CSS</strong> (Cascading Style Sheets) - Used for styling and designing web pages.</li>
-            <li><strong>JavaScript</strong> - Used for adding interactivity and dynamic behavior to web pages.</li>
-            <li><strong>PHP</strong>, <strong>Node.js</strong>, <strong>Python</strong>, and more for backend development.</li>
+            <li><strong>HTML</strong> – Structures web content.</li>
+            <li><strong>CSS</strong> – Styles and designs web pages.</li>
+            <li><strong>JavaScript</strong> – Adds interactivity and logic.</li>
+            <li>Backend technologies like <strong>PHP</strong>, <strong>Node.js</strong>, <strong>Python</strong>, etc.</li>
         </ul>
-        <p>Let's take a look at some examples and interactive programs for each technology.</p>
+        <p>Let's explore some examples and interactive tasks.</p>
     </section>
 
-    <!-- HTML Example Section -->
-    <section>
+    <!-- HTML Section -->
+    <section class="fade">
         <h2>HTML - Create a Simple Web Page</h2>
-        <p>HTML is used to structure the content on the web. Here's an example of a simple web page created with HTML:</p>
+        <p>Here is an example of a basic HTML page:</p>
         <code>
             &lt;!DOCTYPE html&gt;<br>
             &lt;html&gt;<br>
-            &lt;head&gt;<br>
-            &nbsp;&nbsp;&lt;title&gt;My First Web Page&lt;/title&gt;<br>
-            &lt;/head&gt;<br>
+            &lt;head&gt;&lt;title&gt;My First Web Page&lt;/title&gt;&lt;/head&gt;<br>
             &lt;body&gt;<br>
-            &nbsp;&nbsp;&lt;h1&gt;Welcome to My Website&lt;/h1&gt;<br>
-            &nbsp;&nbsp;&lt;p&gt;This is a simple HTML page.&lt;/p&gt;<br>
+            &nbsp;&nbsp;&lt;h1&gt;Welcome&lt;/h1&gt;<br>
+            &nbsp;&nbsp;&lt;p&gt;This is my page.&lt;/p&gt;<br>
             &lt;/body&gt;<br>
-            &lt;/html&gt;<br>
+            &lt;/html&gt;
         </code>
-        <button class="btn" onclick="alert('HTML code is simple! Start creating your own.')">Try It Yourself</button>
+        <button class="btn" onclick="showHTMLMessage()">Try It Yourself</button>
     </section>
 
-    <!-- CSS Example Section -->
-    <section>
+    <!-- CSS Section -->
+    <section class="fade">
         <h2>CSS - Style a Web Page</h2>
-        <p>CSS is used to style the layout and design of web pages. Here’s an example of how to change the color and font of text:</p>
+        <p>Example CSS styling:</p>
         <code>
-            body {<br>
-            &nbsp;&nbsp;color: #333;<br>
-            &nbsp;&nbsp;font-family: Arial, sans-serif;<br>
-            }<br><br>
-            h1 {<br>
-            &nbsp;&nbsp;color: #4CAF50;<br>
-            &nbsp;&nbsp;text-align: center;<br>
-            }<br>
+            body { color: #333; font-family: Arial; }<br>
+            h1 { color: #4CAF50; text-align: center; }
         </code>
-        <button class="btn" onclick="alert('Try adding more styles to see how CSS works!')">Try CSS Styling</button>
+        <button class="btn" onclick="showCSSMessage()">Try CSS Styling</button>
     </section>
 
-    <!-- JavaScript Example Section -->
-    <section>
+    <!-- JavaScript Section -->
+    <section class="fade">
         <h2>JavaScript - Add Interactivity</h2>
-        <p>JavaScript is used to make web pages interactive. Below is an example of a simple function that adds two numbers:</p>
+        <p>Example JavaScript code:</p>
         <code>
-            function addNumbers(a, b) {<br>
-            &nbsp;&nbsp;return a + b;<br>
-            }<br>
-            <br>
-            var result = addNumbers(5, 10);<br>
-            console.log(result); // Output: 15
+            function add(a, b) { return a + b; }<br>
+            var result = add(5, 10);<br>
+            console.log(result); // 15
         </code>
-        <button class="btn" onclick="alert('JavaScript can make your pages interactive!')">Try JavaScript</button>
+        <button class="btn" onclick="showJSMessage()">Try JavaScript</button>
     </section>
 
-    <!-- Interactive Tasks Section -->
-    <section>
+    <!-- TASK SECTION -->
+    <section class="fade">
         <h2>Interactive Tasks</h2>
-        <p>Perform the following tasks to learn more about web technologies:</p>
         <ul>
-            <li><button class="btn" onclick="alert('Task 1: Create a button with a JavaScript function')">Create a Button</button></li>
-            <li><button class="btn" onclick="alert('Task 2: Style a web page with CSS')">Style a Web Page</button></li>
-            <li><button class="btn" onclick="alert('Task 3: Build a simple form with HTML')">Build a Form</button></li>
+            <li><button class="btn" onclick="task1()">Create a Button</button></li><br>
+            <li><button class="btn" onclick="task2()">Style a Page</button></li><br>
+            <li><button class="btn" onclick="task3()">Build a Form</button></li><br>
         </ul>
     </section>
 
-   
-    <section class="continue-section">
+    <!-- CONTINUE SECTION -->
+    <section class="fade continue-section">
         <h2>Ready to Continue?</h2>
         <p>Click below to start your first interactive task.</p>
         <button class="btn" onclick="window.location.href='index2.html'">Continue to Next Task ➡</button>
     </section>
 
 </div>
+
+<!-- External JS -->
+<script src="script.js"></script>
 
 </body>
 </html>
