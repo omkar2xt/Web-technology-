@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tech Tasks</title>
+    <link rel="stylesheet" href="style8.css">
+</head>
+<body>
+
+<header>
+    <h1>Web Technology Tasks</h1>
+    <button id="darkModeBtn">🌙 Dark Mode</button>
+</header>
+
+<div class="container">
+
+    <!-- TASK NAVIGATION -->
+    <nav>
+        <button class="task-btn" onclick="showTask(1)">Task 1 - Easy</button>
+        <button class="task-btn" onclick="showTask(2)">Task 2 - Medium</button>
+        <button class="task-btn" onclick="showTask(3)">Task 3 - Hard</button>
+    </nav>
+
+    <!-- TASK 1 -->
+    <section id="task1" class="task-section">
+        <h2>Task 1: Simple Interactive Page</h2>
+        <p>Click the button to see a greeting message:</p>
+        <button class="btn" onclick="showGreeting()">Click Me!</button>
+    </section>
+
+    <!-- TASK 2 -->
+    <section id="task2" class="task-section">
+        <h2>Task 2: Styled Form with Dark Mode</h2>
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+
+    <!-- TASK 3 -->
+    <section id="task3" class="task-section">
+        <h2>Task 3: Calculator</h2>
+        <div class="calculator">
+            <input type="number" id="num1" placeholder="Enter first number">
+            <input type="number" id="num2" placeholder="Enter second number">
+            <button onclick="calculate('add')">Add</button>
+            <button onclick="calculate('sub')">Subtract</button>
+            <button onclick="calculate('mul')">Multiply</button>
+            <button onclick="calculate('div')">Divide</button>
+            <h2 id="result">Result: 0</h2>
+        </div>
+    </section>
+
+</div>
+
+<script src="script8.js"></script>
+</body>
+</html>
